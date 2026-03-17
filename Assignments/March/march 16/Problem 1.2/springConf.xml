@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id = "sb" class = "cg.demo.springcore.beans.SBU">
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value = "A"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+	</bean>
+	<bean id ="emp1" class="cg.demo.springcore.beans.Employee" >
+		<property name="empid" value="1"></property>
+		<property name="age" value="22"></property>
+		<property name="salary" value="10000"></property>
+		<property name="bizzUnit" value="finance"></property>
+		<property name="name" value="Tithaye"></property>
+		<property name="sbu" ref="sb"></property>
+	</bean>
+	
+</beans>
